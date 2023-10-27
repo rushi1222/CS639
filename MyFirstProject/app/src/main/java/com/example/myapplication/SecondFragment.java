@@ -1,8 +1,6 @@
 package com.example.myapplication;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +30,6 @@ public class SecondFragment extends Fragment {
 
     }
 
-    @SuppressLint("SuspiciousIndentation")
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Integer count = SecondFragmentArgs.fromBundle(getArguments()).getMyArg();
@@ -44,8 +41,6 @@ public class SecondFragment extends Fragment {
         Integer randomNumber = 0;
         if (count > 0) {
             randomNumber = random.nextInt(count + 1);
-            Log.i("SecondFragment", "Rushi display random number: " + randomNumber);
-
         }
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
