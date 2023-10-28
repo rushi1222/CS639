@@ -16,5 +16,8 @@
     <string name="hello_second_fragment">Hello second fragment.</string>
     <string name="random_heading">Here is a random number between 0 and %d.</string>
     <string name="rushi_kotamraju">Rushi_Kotamraju</string>
+    <string name="todo">TODO</string>
+    <string name="i_am">i am</string>
+    <string name="todo1">TODO</string>
 
 </resources>

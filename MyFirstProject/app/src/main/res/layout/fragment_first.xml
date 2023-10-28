@@ -14,23 +14,30 @@
         android:background="@color/screenBackground"
         android:padding="16dp">
 
+
         <TextView
             android:id="@+id/textview_first"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
             android:text="@string/lorem_ipsum"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#333333"
             android:textSize="72sp"
             android:textStyle="bold"
-            android:fontFamily="sans-serif"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3"
-            app:layout_constraintHorizontal_bias="0.5"
-            />
+            app:layout_constraintVertical_bias="0.499" />
+        <ImageView
+            android:layout_width="73dp"
+            android:layout_height="75dp"
+            android:src="@drawable/rejexts"
+            tools:layout_editor_absoluteX="333dp"
+            tools:layout_editor_absoluteY="3dp"
+            android:contentDescription="@string/todo"
+            tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/random_button"
@@ -76,6 +83,26 @@
             app:layout_constraintStart_toEndOf="@+id/toast_button"
             app:layout_constraintTop_toBottomOf="@+id/textview_first"
             app:layout_constraintHorizontal_bias="0.5"/>
+
+        <Button
+            android:id="@+id/iam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="i am"
+            app:layout_constraintTop_toBottomOf="@+id/count_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/batman"-->
+<!--            android:layout_width="243dp"-->
+<!--            android:layout_height="147dp"-->
+<!--            android:src="@drawable/batman"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/textview_first"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent" />-->
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
