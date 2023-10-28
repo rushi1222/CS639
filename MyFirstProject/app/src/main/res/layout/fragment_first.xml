@@ -14,22 +14,86 @@
         android:background="@color/screenBackground"
         android:padding="16dp">
 
-
-        <TextView
-            android:id="@+id/textview_first"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:text="@string/lorem_ipsum"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#333333"
-            android:textSize="72sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <EditText
+            android:id="@+id/input_liters"
+            android:layout_width="200dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="16dp"
+            android:autofillHints=""
+            android:hint="Enter liters"
+            android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.499" />
+            tools:ignore="HardcodedText,MissingConstraints,TextFields" />
+
+        <Button
+            android:id="@+id/convert_button"
+            android:layout_width="125dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="16dp"
+            android:text="Convert"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_liters" />
+
+        <TextView
+            android:id="@+id/output_gallons"
+            android:layout_width="288dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="16dp"
+            android:text="Result in gallons will appear here."
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/convert_button" />
+
+
+        <!--        <TextView-->
+<!--            android:id="@+id/textview_first"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="sans-serif"-->
+<!--            android:text="@string/lorem_ipsum"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--            android:textColor="#333333"-->
+<!--            android:textSize="72sp"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.192" />-->
+        <TextView
+            android:id="@+id/myppname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="158dp"
+            android:text="@string/app_name"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/output_gallons" />
+        <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="Rushi Kotamraju"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            android:background="@drawable/rounded_bg"
+            android:elevation="4dp"
+            android:shadowColor="#000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/output_gallons" />
+
+
         <ImageView
             android:layout_width="73dp"
             android:layout_height="75dp"
@@ -39,70 +103,15 @@
             android:contentDescription="@string/todo"
             tools:ignore="MissingConstraints" />
 
-        <Button
-            android:id="@+id/random_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:background="@color/buttonBackground"
-            android:text="@string/random_button_text"
-            android:textColor="#333333"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_first" />
-
-        <Button
-            android:id="@+id/toast_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="24dp"
-            android:background="@color/buttonBackground"
-            android:text="@string/toast_button_text"
-            android:textColor="#333333"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/count_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview_first"
-            tools:ignore="UnknownId"
-            app:layout_constraintHorizontal_bias="0" />
-
-        <Button
-            android:id="@+id/count_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/count_button_text"
-            android:textColor="#333333"
-            android:background="@color/buttonBackground"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            app:layout_constraintEnd_toStartOf="@+id/random_button"
-            app:layout_constraintStart_toEndOf="@+id/toast_button"
-            app:layout_constraintTop_toBottomOf="@+id/textview_first"
-            app:layout_constraintHorizontal_bias="0.5"/>
-
-        <Button
-            android:id="@+id/iam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="i am"
-            app:layout_constraintTop_toBottomOf="@+id/count_button"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-
-<!--        <ImageView-->
-<!--            android:id="@+id/batman"-->
-<!--            android:layout_width="243dp"-->
-<!--            android:layout_height="147dp"-->
-<!--            android:src="@drawable/batman"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/textview_first"-->
+<!--        <Button-->
+<!--            android:id="@+id/iam"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="i am"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/output_gallons"-->
 <!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent" />-->
-
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:ignore="HardcodedText" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>
