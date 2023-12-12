@@ -19,24 +19,23 @@ import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
 
 
-// Define custom colors
-val navy = Color(0xFF003366) // Example color value
-val chartreuse = Color(0xFF7FFF00) // Example color value
-val lightBlue = Color(0xFFADD8E6) // Example color value
+
 
 private val darkColorScheme = darkColorScheme(
-    surface = Color.Blue, // Predefined color
-    onSurface = navy,
-    primary = navy,
-    onPrimary = chartreuse
+    surface = Blue,
+    onSurface = Navy,
+    primary = Navy,
+    onPrimary = Chartreuse
 )
 
 private val lightColorScheme = lightColorScheme(
-    surface = Color.Blue, // Predefined color
-    onSurface = Color.White, // Predefined color
-    primary = lightBlue,
-    onPrimary = navy
+    surface = Blue,
+    onSurface = Color.White,
+    primary = LightBlue,
+    onPrimary = Navy
 )
+
+
 @Composable
 fun JepackComposeBasicsTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
