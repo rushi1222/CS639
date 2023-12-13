@@ -25,7 +25,7 @@ import javax.inject.Inject
 /**
  * Navigator implementation.
  */
-class AppNavigatorImpl @Inject constructor(private val activity: FragmentActivity): AppNavigator{
+class AppNavigatorImpl @Inject constructor(private val activity: FragmentActivity) : AppNavigator {
 
     override fun navigateTo(screen: Screens) {
         val fragment = when (screen) {

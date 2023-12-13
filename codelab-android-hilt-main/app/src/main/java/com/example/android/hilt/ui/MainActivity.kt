@@ -29,24 +29,20 @@ import javax.inject.Inject
  *
  * Container for the Buttons & Logs fragments. This activity simply tracks clicks on buttons.
  */
-@Suppress("DEPRECATION")
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    @Inject
-    lateinit var navigator: AppNavigator
+    @Inject lateinit var navigator: AppNavigator
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         if (savedInstanceState == null) {
             navigator.navigateTo(Screens.BUTTONS)
         }
     }
 
-    @Deprecated("Deprecated in Java")
     override fun onBackPressed() {
         super.onBackPressed()
 

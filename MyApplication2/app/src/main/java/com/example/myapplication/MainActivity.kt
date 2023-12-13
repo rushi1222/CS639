@@ -56,3 +56,8 @@ class MainActivity : AppCompatActivity() {
                 || super.onSupportNavigateUp()
     }
 }
+def function(){
+    hekjfdhsdlkjfhlksdjfggh
+    asdfkhkjsdghiopl;ksg             l;askdfl;'sdkf
+    kfdjdlskfj'
+}

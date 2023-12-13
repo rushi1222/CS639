@@ -3,7 +3,7 @@
 This folder contains the source code for the "Using Hilt in your Android app" codelab.
 
 The codelab is built in multiple GitHub branches:
-* `main` is the codelab's starting point.
+* `master` is the codelab's starting point.
 * `solution` contains the solution to this codelab.
 
 
