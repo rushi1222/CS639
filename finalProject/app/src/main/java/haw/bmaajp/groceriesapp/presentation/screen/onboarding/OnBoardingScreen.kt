@@ -7,7 +7,12 @@ import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -15,6 +20,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -34,16 +40,18 @@ fun OnBoardingScreen(
         onClick = {
             navController.popBackStack()
             navController.navigate(Graph.MAIN)
-            onBoardingViewModel.saveOnBoardingState(isCompleted = true)
+            onBoardingViewModel.saveOnBoardingState(isCompleted = false)
         }
     )
 }
-
 @Composable
 fun OnBoarding(
     modifier: Modifier = Modifier,
     onClick: () -> Unit
 ) {
+    var username by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+
     Box(
         modifier = modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
@@ -80,6 +88,28 @@ fun OnBoarding(
                     textAlign = TextAlign.Center,
                 )
                 Spacer(modifier = Modifier.height(DIMENS_40dp))
+                // Dummy Username Input
+                TextField(
+                    value = username,
+                    onValueChange = { username = it },
+                    label = { Text("Username") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = DIMENS_16dp, vertical = DIMENS_8dp)
+                )
+
+                // Dummy Password Input
+                TextField(
+                    value = password,
+                    onValueChange = { password = it },
+                    label = { Text("Password") },
+                    visualTransformation = PasswordVisualTransformation(),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = DIMENS_16dp, vertical = DIMENS_8dp)
+                )
+
+                Spacer(modifier = Modifier.height(DIMENS_40dp))
                 Button(
                     onClick = {
                         onClick.invoke()
@@ -103,7 +133,6 @@ fun OnBoarding(
         }
     }
 }
-
 @Preview
 @Composable
 fun OnBoardingPreview() {
