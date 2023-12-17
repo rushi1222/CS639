@@ -1,6 +1,7 @@
 package haw.bmaajp.groceriesapp.presentation.screen.cart
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -9,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import haw.bmaajp.groceriesapp.R
 import haw.bmaajp.groceriesapp.presentation.common.content.ListContentCart
@@ -16,7 +18,6 @@ import haw.bmaajp.groceriesapp.ui.theme.Black
 import haw.bmaajp.groceriesapp.ui.theme.DIMENS_16dp
 import haw.bmaajp.groceriesapp.ui.theme.GilroyFontFamily
 import haw.bmaajp.groceriesapp.ui.theme.TEXT_SIZE_18sp
-
 @Composable
 fun CartScreen(
     modifier: Modifier = Modifier,
@@ -46,5 +47,15 @@ fun CartScreen(
                 cartViewModel.deleteCart(productItem.copy(isCart = false))
             }
         )
+
+        // Dummy Checkout Button
+        Button(
+            onClick = { /* No action needed for display-only button */ },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp)
+        ) {
+            Text(text = "Checkout")
+        }
     }
 }
